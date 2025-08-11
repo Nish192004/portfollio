@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rajshekhar Ojha - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- DNA Canvas -->
+  <canvas id="dnaCanvas"></canvas>
+
+  <!-- Hero Section: Fully transparent to show DNA -->
+  <section class="hero-space">
+    <div class="hero-title">
+      <h1>Rajshekhar Ojha</h1>
+      <p>B.Tech Graduate – Computer Science</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-container" id="about">
+    <section class="profile-card glass-box">
+      <img src="profile.jpeg" alt="Profile" class="profile-image" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+I am Rajshekhar Ojha, a passionate B.Tech student specializing in Computer Science. As a fresher, I have a strong interest in software development, competitive programming, and full-stack web technologies. I enjoy building interactive web applications and solving complex problems using data structures and algorithms. My technical skill set includes C++, JavaScript, HTML, CSS, React.js, Node.js, Python, and database systems like MySQL and MongoDB. I am always eager to learn new technologies and enhance my problem-solving abilities. Whether it's front-end interfaces or back-end logic, I strive to create efficient, user-friendly solutions. I aim to grow as a developer and contribute meaningfully to innovative projects that challenge my skills and expand my knowledge.        </p>
+      </div>
+    </section>
+
+    <section class="glass-box">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      </div>
+    </section>
+
+    <section class="glass-box contact-form">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- DNA Animation Script -->
+  <script src="dna.js"></script>
+</body>
+</html>
