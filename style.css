@@ -1,0 +1,185 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, #050a0f, #0a0f1a);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* === DNA Background === */
+#dnaCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
+  pointer-events: none;
+}
+
+/* === Hero Section (Transparent to show DNA) === */
+.hero-space {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  background: transparent;
+  z-index: 1;
+}
+
+.hero-space h1 {
+  font-size: 4rem;
+  color: #00eaff;
+  text-shadow: 0 0 25px #00eaff;
+}
+
+.hero-space p {
+  font-size: 1.5rem;
+  color: #cceeff;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* === Main Content === */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Glassmorphism Box === */
+.glass-box,
+.profile-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  z-index: 2;
+}
+
+/* === Profile Card === */
+.profile-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00eaff;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+/* === About Text === */
+.about-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.about-text p {
+  line-height: 1.6;
+  color: #cfd8dc;
+}
+
+/* === Skills Section === */
+.glass-box h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #00eaff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.skills-grid img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 4px #00eaff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 12px #00eaff);
+}
+
+/* === Contact Form === */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 18px;
+  background: rgba(0, 10, 20, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  resize: vertical;
+  transition: box-shadow 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+.contact-form button {
+  background: #00eaff;
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00eaff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 20px #00eaff;
+}
