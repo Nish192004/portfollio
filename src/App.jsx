@@ -11,6 +11,56 @@ const GITHUB_URL = "https://github.com/Nish192004";
 const LINKEDIN_URL = "https://www.linkedin.com/"; // TODO: put your LinkedIn profile URL
 const EMAIL = "rajshekhar192004@gmail.com";
 
+/* ================= TECH LOGOS (skillicons.dev names) ================= */
+// Technologies not listed here (JWT, bcrypt, REST APIs, SQL, OpenAI API, React Router)
+// simply show a small dot instead of a logo.
+
+const techIcons = {
+  "HTML5": "html",
+  "CSS3": "css",
+  "JavaScript": "js",
+  "React.js": "react",
+  "Redux": "redux",
+  "Tailwind CSS": "tailwind",
+  "Vite": "vite",
+  "Node.js": "nodejs",
+  "Express.js": "express",
+  "Prisma ORM": "prisma",
+  "Prisma": "prisma",
+  "PHP": "php",
+  "Python": "py",
+  "PostgreSQL": "postgres",
+  "MongoDB": "mongodb",
+  "MySQL": "mysql",
+  "Sequelize": "sequelize",
+  "Git": "git",
+  "GitHub": "github",
+  "Postman": "postman",
+  "Jest": "jest",
+  "AWS Basics": "aws",
+};
+
+function TechPill({ name }) {
+  const icon = techIcons[name];
+  return (
+    <span className="tech-pill">
+      {icon ? (
+        <img
+          src={`https://skillicons.dev/icons?i=${icon}&theme=dark`}
+          alt=""
+          width="22"
+          height="22"
+          loading="lazy"
+          onError={(e) => { e.currentTarget.style.display = "none"; }}
+        />
+      ) : (
+        <i className="pill-dot" aria-hidden="true" />
+      )}
+      {name}
+    </span>
+  );
+}
+
 /* ================= DATA ================= */
 
 const skills = [
@@ -55,7 +105,6 @@ const navigation = [
 ];
 
 const roles = ["Full-Stack Developer", "AI Integrator", "API Architect", "Problem Solver"];
-const marquee = ["React", "Node.js", "PostgreSQL", "MongoDB", "Prisma", "Python", "OpenAI API", "Tailwind", "JWT", "Git"];
 
 /* ================= NEURAL NETWORK BACKGROUND ================= */
 
@@ -280,13 +329,6 @@ export default function App() {
           <a href="#about" className="scroll-cue"><span />Scroll<ArrowDown size={13} /></a>
         </section>
 
-        {/* MARQUEE */}
-        <div className="marquee" aria-hidden="true">
-          <div className="marquee-track">
-            {[...marquee, ...marquee, ...marquee].map((m, i) => (<span key={i}>{m}</span>))}
-          </div>
-        </div>
-
         {/* ABOUT */}
         <section className="about-section section-wrap" id="about">
           <div className="section-heading">
@@ -366,7 +408,9 @@ export default function App() {
                   <div className="skill-detail-columns">
                     <div>
                       <p className="detail-label">Technologies & tools</p>
-                      <div className="skill-tags">{skill.technologies.map((t) => (<span key={t}>{t}</span>))}</div>
+                      <div className="skill-tags">
+                        {skill.technologies.map((t) => (<TechPill key={t} name={t} />))}
+                      </div>
                     </div>
                     <div>
                       <p className="detail-label">Practical knowledge</p>
